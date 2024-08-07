@@ -12,13 +12,13 @@
 # Hecho. no detecta Fechas. S: Agregado DATE y TIME as LABEL.
 # Mejoro Regex passports.
 # Falla con nombres con acento cerrado como "Mercè ". S: Eliminar los acentos?
+#            S: Uasr lib Unicode para normalizar
 
 
 
 import docx
 import spacy
-#  Visualizing Named entities
-from spacy import displacy
+import unicodedata
 
 import re
 import tkinter as tk
@@ -35,9 +35,16 @@ nlp = spacy.load("en_core_web_md")
 def load_document(file_path):
     return docx.Document(file_path)
 
+# Helper Funtion to remove accents
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
+
 # Identify PII using NER and REGEX
 def identify_pii(text):
-    doc = nlp(text)
+    normalized_text = remove_accents(text)
+    doc = nlp(normalized_text)
     pii_entities = []
     # Use SpaCy for standard PII detection
     for ent in doc.ents:
