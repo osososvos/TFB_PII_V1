@@ -1,4 +1,3 @@
-
 # *GUI OK
 # *Problemas: Aglutina en una pagina
 #     No respeta el tamaño de la tipografia.
@@ -13,7 +12,8 @@
 # Mejoro Regex passports.
 # Falla con nombres con acento cerrado como "Mercè ". S: Eliminar los acentos?
 #            S: Uasr lib Unicode para normalizar
-
+# Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
+#   S: Regex
 
 
 import docx
@@ -27,6 +27,8 @@ from tkinter import filedialog, messagebox
 # Load models
 #nlp = spacy.load("en_core_web_sm")
 nlp = spacy.load("en_core_web_md")
+
+
 #nlp = spacy.load("ca_core_news_sm")
 #nlp = spacy.load("en_core_web_trf")
 
@@ -34,6 +36,7 @@ nlp = spacy.load("en_core_web_md")
 # Load and Read Word Document
 def load_document(file_path):
     return docx.Document(file_path)
+
 
 # Helper Funtion to remove accents
 def remove_accents(input_str):
@@ -46,6 +49,7 @@ def identify_pii(text):
     normalized_text = remove_accents(text)
     doc = nlp(normalized_text)
     pii_entities = []
+
     # Use SpaCy for standard PII detection
     for ent in doc.ents:
         if ent.label_ in ["PERSON", "GPE", "ORG", "DATE", "TIME", "ORDINAL", "CARDINAL", "LOC"]:
@@ -61,9 +65,13 @@ def identify_pii(text):
     for match in passport_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "PASSPORT"))
 
+    # Custom regex for specific alphan patterns preceded by keywords
+    id_regex = re.compile(r'\b(?:document:|number:)\s*([a-zA-Z0-9]+)\b', re.IGNORECASE)
+    for match in id_regex.finditer(text):
+        pii_entities.append((match.start(), match.end(), "ID"))
+
     print(pii_entities)
     return pii_entities
-
 
 
 #  Redact PII with the entity name
