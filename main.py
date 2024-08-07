@@ -1,6 +1,6 @@
 
 # *GUI OK
-# *Problemas: Aglutina todo en una pagina-
+# *Problemas: Aglutina en una pagina
 #     No respeta el tamaño de la tipografia.
 #   Falla con muchas entidades
 #       El modelo es ENG SM y falla con muchas PERSON in Catalan.

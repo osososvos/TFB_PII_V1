@@ -86,7 +86,7 @@ Here's the list of people who have contributed to < project's name >:
 - John Doe – [@JohnDoeTwitter](https://twitter.com/< username >) – john@example.com
 - Jane Doe – [@JaneDoeTwitter](https://twitter.com/< username >) – jane@example.com
 
-The < project's name > development team really appreciates and thanks the time and effort that all these fellows have put into the project's growth and improvement.
+The Anonimizer development team really appreciates and thanks the time and effort that all these fellows have put into the project's growth and improvement.
 
 ## Author
 
