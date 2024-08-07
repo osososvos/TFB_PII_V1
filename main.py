@@ -8,18 +8,25 @@
 #           Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
 #               Los salva en:.venv\Lib\site-packages\en_core_web_sm
 
-#   Remplaza con "REDACTED --c cambiar a "Eliminado" o la Entidad.
+#   HECHO:Remplaza con "REDACTED --c cambiar a "Eliminado" o la Entidad.
+# Hecho. no detecta Fechas. S: Agregado DATE y TIME as LABEL.
+# Mejoro Regex passports.
+# Falla con nombres con acento cerrado como "Mercè ". S: Eliminar los acentos?
 
 
 
 import docx
 import spacy
+#  Visualizing Named entities
+from spacy import displacy
+
 import re
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
 # Load models
-nlp = spacy.load("en_core_web_sm")
+#nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_md")
 #nlp = spacy.load("ca_core_news_sm")
 #nlp = spacy.load("en_core_web_trf")
 
@@ -34,15 +41,16 @@ def identify_pii(text):
     pii_entities = []
     # Use SpaCy for standard PII detection
     for ent in doc.ents:
-        if ent.label_ in ["PERSON", "GPE", "ORG", "ORDINAL", "CARDINAL", "LOC"]:
+        if ent.label_ in ["PERSON", "GPE", "ORG", "DATE", "TIME", "ORDINAL", "CARDINAL", "LOC"]:
             pii_entities.append((ent.start_char, ent.end_char, ent.label_))
+
     # Custom regex for email addresses
     email_regex = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
     for match in email_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "EMAIL"))
 
-    # Custom regex for passport numbers (generic example)
-    passport_regex = re.compile(r'[A-PR-WY][1-9]\d\s?\d{4}[1-9]')
+    # Custom regex for passport numbers (covering multiples countries)
+    passport_regex = re.compile(r'\b(?:[A-PR-WY][1-9]\d\s?\d{4}[1-9]|[A-Z]\d{8}|\d{9}|[A-Z]{2}\d{7}|[A-Z]{3}\d{6})\b')
     for match in passport_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "PASSPORT"))
 
@@ -50,13 +58,15 @@ def identify_pii(text):
     return pii_entities
 
 
-#  Redact PII
+
+#  Redact PII with the entity name
 def redact_text(text, pii_entities):
     redacted_text = text
     offset = 0
     for start, end, label in pii_entities:
-        redacted_text = redacted_text[:start + offset] + "[REDACTED]" + redacted_text[end + offset:]
-        offset += len("[REDACTED]") - (end - start)
+        replacement_text = f"[{label}]"
+        redacted_text = redacted_text[:start + offset] + replacement_text + redacted_text[end + offset:]
+        offset += len(replacement_text) - (end - start)
     return redacted_text
 
 
