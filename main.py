@@ -18,7 +18,7 @@ import re
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-# Load model
+# Load models
 nlp = spacy.load("en_core_web_sm")
 #nlp = spacy.load("ca_core_news_sm")
 #nlp = spacy.load("en_core_web_trf")
