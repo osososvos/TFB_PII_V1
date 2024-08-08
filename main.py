@@ -3,18 +3,18 @@
 # Aglutina el texto en una pagina ya que no respeta Saltos de linea
 # No respeta el tamaño de la tipografia original
 
-# Hecho: Falla con muchas entidades
+# Solved: Falla con muchas entidades
 #       El modelo es ENG SM y falla con muchas PERSON in Catalan.
 #       Usado CAt y peor
 #       --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
 #               Los salva en:.venv\Lib\site-packages\en_core_web_sm---
 #   S: Cambiar a modelo eng_core_MD
 
-# HECHO:Remplaza con nombre de entidad en vez de "REDACTED"
-# Hecho: No detecta Fechas.
+# Solved:Remplaza con nombre de entidad en vez de "REDACTED"
+# Solved: No detecta Fechas.
 #    S: Agregado DATE y TIME as LABEL.
-# Hecho: Mejorado Regex passports.Mas flexible
-# Hecho: Falla con nombres con acento cerrado como "Mercè ".
+# Solved: Mejorado Regex passports.Mas flexible
+# Solved: Falla con nombres con acento cerrado como "Mercè ".
 #            S: Usar lib Unicode para normalizar y eliminar acentos
 # Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
 #   S: Regex con alphan patterns preceded by keywords
@@ -74,7 +74,7 @@ def identify_pii(text):
     for match in passport_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "PASSPORT"))
 
-    # Custom regex for specific alphan patterns preceded by keywords
+    # Custom regex for specific alphanumeric patterns preceded by keywords
     id_regex = re.compile(r'\b(?:document:|number:)\s*([a-zA-Z0-9]+)\b', re.IGNORECASE)
     for match in id_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "ID"))
