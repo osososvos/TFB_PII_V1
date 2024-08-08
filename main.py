@@ -70,14 +70,15 @@ def identify_pii(text):
         pii_entities.append((match.start(), match.end(), "EMAIL"))
 
     # Custom regex for passport numbers (covering multiples countries)
-    passport_regex = re.compile(r'\b(?:[A-PR-WY][1-9]\d\s?\d{4}[1-9]|[A-Z]\d{8}|\d{9}|[A-Z]{2}\d{7}|[A-Z]{3}\d{6})\b')
-    for match in passport_regex.finditer(text):
-        pii_entities.append((match.start(), match.end(), "PASSPORT"))
+    #passport_regex = re.compile(r'\b(?:[A-PR-WY][1-9]\d\s?\d{4}[1-9]|[A-Z]\d{8}|\d{9}|[A-Z]{2}\d{7}|[A-Z]{3}\d{6})\b')
+    #for match in passport_regex.finditer(text):
+    #    pii_entities.append((match.start(), match.end(), "PASSPORT"))
 
     # Custom regex for specific alphanumeric patterns preceded by keywords
-    id_regex = re.compile(r'\b(?:document:|number:)\s*([a-zA-Z0-9]+)\b', re.IGNORECASE)
+    # NOOOO   Custom regex for specific alphanumeric patterns preceded by keywords
+    id_regex = re.compile(r'(?:document:|number:)\s*([a-zA-Z0-9]+)', re.IGNORECASE)
     for match in id_regex.finditer(text):
-        pii_entities.append((match.start(), match.end(), "ID"))
+        pii_entities.append((match.start(), match.start() + len(match.group(1)), "ID"))
 
     print(pii_entities)
     return pii_entities
