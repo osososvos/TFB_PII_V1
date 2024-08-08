@@ -3,9 +3,7 @@
 # Aglutina el texto en una pagina ya que no respeta Saltos de linea
 # No respeta el tamaño de la tipografia original
 
-# Solved: Falla con muchas entidades
-#       El modelo es ENG SM y falla con muchas PERSON in Catalan.
-#       Usado CAt y peor
+# Solved: Falla con muchas entidades. Usado CAT y peor
 #       --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
 #               Los salva en:.venv\Lib\site-packages\en_core_web_sm---
 #   S: Cambiar a modelo eng_core_MD
@@ -14,9 +12,10 @@
 # Solved: No detecta Fechas.
 #    S: Agregado DATE y TIME as LABEL.
 # Solved: Mejorado Regex passports.Mas flexible
+#    Se solapa con el regex de "number:" por ello, lo anulo.
 # Solved: Falla con nombres con acento cerrado como "Mercè ".
 #            S: Usar lib Unicode para normalizar y eliminar acentos
-# Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
+# Solved: Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a year?
 #   S: Regex con alphan patterns preceded by keywords
 #
 # ///////Improvements//////
@@ -69,16 +68,12 @@ def identify_pii(text):
     for match in email_regex.finditer(text):
         pii_entities.append((match.start(), match.end(), "EMAIL"))
 
-    # Custom regex for passport numbers (covering multiples countries)
-    #passport_regex = re.compile(r'\b(?:[A-PR-WY][1-9]\d\s?\d{4}[1-9]|[A-Z]\d{8}|\d{9}|[A-Z]{2}\d{7}|[A-Z]{3}\d{6})\b')
-    #for match in passport_regex.finditer(text):
-    #    pii_entities.append((match.start(), match.end(), "PASSPORT"))
-
-    # Custom regex for specific alphanumeric patterns preceded by keywords
-    # NOOOO   Custom regex for specific alphanumeric patterns preceded by keywords
-    id_regex = re.compile(r'(?:document:|number:)\s*([a-zA-Z0-9]+)', re.IGNORECASE)
+    # Custom regex to target alphanumeric patterns preceded by "number:" word.
+    id_regex = re.compile(r'\bnumber:\s*([a-zA-Z0-9]+)\b', re.IGNORECASE)
     for match in id_regex.finditer(text):
-        pii_entities.append((match.start(), match.start() + len(match.group(1)), "ID"))
+        start, end = match.span(1)
+        pii_entities.append((start, end, "ID"))
+
 
     print(pii_entities)
     return pii_entities
