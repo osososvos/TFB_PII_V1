@@ -68,23 +68,15 @@ This application allows you to load Word documents (.docx) and remove personal i
 
 ## Technologies
 
-< Project's name > uses the following technologies and tools:
+Anonimyzer uses the following technologies and tools:
 
 - [Python](https://www.python.org/): ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-- [SQLite](https://sqlite.org/): ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 - ...
 
 
 ## Contributing
 
 Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un issue primero para discutir lo que le gustaría cambiar.
-
-## Contributors
-
-Here's the list of people who have contributed to < project's name >:
-
-- John Doe – [@JohnDoeTwitter](https://twitter.com/< username >) – john@example.com
-- Jane Doe – [@JaneDoeTwitter](https://twitter.com/< username >) – jane@example.com
 
 The Anonimizer development team really appreciates and thanks the time and effort that all these fellows have put into the project's growth and improvement.
 
@@ -95,10 +87,6 @@ The Anonimizer development team really appreciates and thanks the time and effor
 ## Change log
 
 -0.2
-   - Known Issues:
-     - Aglutina el texto en una pagina ya que no respeta Saltos de linea
-     - No respeta el tamaño de la tipografia original
-     
    - Fixed:
      - Falla con muchas entidades. Usado CAT y peor
            --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
@@ -110,46 +98,22 @@ The Anonimizer development team really appreciates and thanks the time and effor
      - Falla con nombres con acento cerrado como "Mercè ". S: Usar lib Unicode para normalizar y eliminar acentos
      - Fails to label 4 digits numbers in to CARDINAL category. Possibly because is like a year?S: Specific REGEX
     
-   - Future improvements:
-     - GUI inclusiva(ampliar size or implement High Contrast 
-     - Be able to deal with texts embbebed in cells.
-     
-- 0.1
-   - Hecho: Falla con muchas entidades
-           El modelo es ENG SM y falla con muchas PERSON in Catalan.
-           Usado CAt y peor
-           --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
-                   Los salva en:.venv\Lib\site-packages\en_core_web_sm---
-       S: Cambiar a modelo eng_core_MD
 
-     HECHO:Remplaza con nombre de entidad en vez de "REDACTED"
-     Hecho: No detecta Fechas. 
-        S: Agregado DATE y TIME as LABEL.
-     Hecho: Mejorado Regex passports.Mas flexible   Hecho: Falla con nombres con acento cerrado como "Mercè ".
-                S: Usar lib Unicode para normalizar y eliminar acentos
-     Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
-       S: Regex con alphan patterns preceded by keywords
 - 0.0.2
     - Polish the user interface
 - 0.0.1
     - First working version
 - ...
 
-## Known Issues
+### Known Issues
 
 - Currently, all information is condensed onto one page.
 - The font size is not respected.
-- Failures when processing documents with many entities.
-- The SpaCy `en_core_web_sm` model fails with many `PERSON` entities in Catalan.
 
-### Alternative Solution
+### Working on...
+- GUI inclusiva(ampliar Font size or implement High Contrast 
+- Be able to deal with texts embbebed in cells.
 
-To test other models, you can download the SpaCy `en_core_web_md` model:
-```sh
-python -m spacy download en_core_web_md
-```
+### License
 
-
-## License
-
-< project's name > is distributed under the < license > license. See [`LICENSE`](LICENSE.md) for more details.
+Anonimyzer is distributed under the < license > license. See [`LICENSE`](LICENSE.md) for more details.
