@@ -1,19 +1,28 @@
 # *GUI OK
-# *Problemas: Aglutina en una pagina
-#     No respeta el tamaño de la tipografia.
-#   Falla con muchas entidades
-#       El modelo es ENG SM y falla con muchas PERSON in Catalan.
-#               Usado CAt y peor)
-#           Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
-#               Los salva en:.venv\Lib\site-packages\en_core_web_sm
+# //////////ISSUES////////////////
+# Aglutina el texto en una pagina ya que no respeta Saltos de linea
+# No respeta el tamaño de la tipografia original
 
-#   HECHO:Remplaza con "REDACTED --c cambiar a "Eliminado" o la Entidad.
-# Hecho. no detecta Fechas. S: Agregado DATE y TIME as LABEL.
-# Mejoro Regex passports.
-# Falla con nombres con acento cerrado como "Mercè ". S: Eliminar los acentos?
-#            S: Uasr lib Unicode para normalizar
+# Hecho: Falla con muchas entidades
+#       El modelo es ENG SM y falla con muchas PERSON in Catalan.
+#       Usado CAt y peor
+#       --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
+#               Los salva en:.venv\Lib\site-packages\en_core_web_sm---
+#   S: Cambiar a modelo eng_core_MD
+
+# HECHO:Remplaza con nombre de entidad en vez de "REDACTED"
+# Hecho: No detecta Fechas.
+#    S: Agregado DATE y TIME as LABEL.
+# Hecho: Mejorado Regex passports.Mas flexible
+# Hecho: Falla con nombres con acento cerrado como "Mercè ".
+#            S: Usar lib Unicode para normalizar y eliminar acentos
 # Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
-#   S: Regex
+#   S: Regex con alphan patterns preceded by keywords
+#
+# ///////Improvements//////
+# GUI inclusiva(ampliar size or implement High Contrast
+# Be able to deal with texts embbebed in cells.
+
 
 
 import docx

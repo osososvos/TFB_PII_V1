@@ -93,7 +93,21 @@ The Anonimizer development team really appreciates and thanks the time and effor
 < AGR > – [@AuthorTwitter](https://twitter.com/< username >) – author@example.com
 
 ## Change log
+- 0.1
+    - Hecho: Falla con muchas entidades
+           El modelo es ENG SM y falla con muchas PERSON in Catalan.
+           Usado CAt y peor
+           --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
+                   Los salva en:.venv\Lib\site-packages\en_core_web_sm---
+       S: Cambiar a modelo eng_core_MD
 
+     HECHO:Remplaza con nombre de entidad en vez de "REDACTED"
+     Hecho: No detecta Fechas. 
+        S: Agregado DATE y TIME as LABEL.
+     Hecho: Mejorado Regex passports.Mas flexible   Hecho: Falla con nombres con acento cerrado como "Mercè ".
+                S: Usar lib Unicode para normalizar y eliminar acentos
+     Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a yer?
+       S: Regex con alphan patterns preceded by keywords
 - 0.0.2
     - Polish the user interface
 - 0.0.1
