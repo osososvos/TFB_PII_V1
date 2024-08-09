@@ -87,7 +87,8 @@ The Anonimizer development team really appreciates and thanks the time and effor
 ## Change log
 - 0.2.1
    - Fixed:
-     - Honor Page breakes.
+     - Handle File in Use
+     - Handle Page Breaks
 - 0.2
    - Fixed:
      - Falla con muchas entidades. Usado CAT y peor
@@ -110,7 +111,7 @@ The Anonimizer development team really appreciates and thanks the time and effor
 ### Known Issues
 
 - PII in tables or cells not REDACTED
-- The font size is not respected.
+
 
 ### Working on...
 - GUI inclusiva(ampliar Font size or implement High Contrast 

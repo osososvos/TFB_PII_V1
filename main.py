@@ -6,13 +6,17 @@ import docx
 import spacy
 import unicodedata
 
-# Load models
+# Load model
 nlp = spacy.load("en_core_web_md")
 
 
-# Load and Read Word Document
+# Check if the file is already open. Load and Read Word Document
 def load_document(file_path):
-    return docx.Document(file_path)
+    try:
+        return docx.Document(file_path)
+    except docx.opc.exceptions.PackageNotFoundError:
+        messagebox.showerror("Error", "El archivo está en uso. Por favor, ciérrelo antes de procesarlo.")
+        return None
 
 
 # Remove accents
