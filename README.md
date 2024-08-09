@@ -85,8 +85,10 @@ The Anonimizer development team really appreciates and thanks the time and effor
 < AGR > – [@AuthorTwitter](https://twitter.com/< username >) – author@example.com
 
 ## Change log
-
--0.2
+- 0.2.1
+   - Fixed:
+     - Honor Page breakes.
+- 0.2
    - Fixed:
      - Falla con muchas entidades. Usado CAT y peor
            --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
@@ -107,7 +109,7 @@ The Anonimizer development team really appreciates and thanks the time and effor
 
 ### Known Issues
 
-- Currently, all information is condensed onto one page.
+- PII in tables or cells not REDACTED
 - The font size is not respected.
 
 ### Working on...

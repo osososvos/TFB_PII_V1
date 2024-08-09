@@ -1,44 +1,13 @@
-# *GUI OK
-# //////////ISSUES////////////////
-# Aglutina el texto en una pagina ya que no respeta Saltos de linea
-# No respeta el tamaño de la tipografia original
-
-# Solved: Falla con muchas entidades. Usado CAT y peor
-#       --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
-#               Los salva en:.venv\Lib\site-packages\en_core_web_sm---
-#   S: Cambiar a modelo eng_core_MD
-
-# Solved:Remplaza con nombre de entidad en vez de "REDACTED"
-# Solved: No detecta Fechas.
-#    S: Agregado DATE y TIME as LABEL.
-# Solved: Mejorado Regex passports.Mas flexible
-#    Se solapa con el regex de "number:" por ello, lo anulo.
-# Solved: Falla con nombres con acento cerrado como "Mercè ".
-#            S: Usar lib Unicode para normalizar y eliminar acentos
-# Solved: Falla al tagear 4 digits numbers in to CARDINAL category. Possibly because is like a year?
-#   S: Regex con alphan patterns preceded by keywords
-#
-# ///////Improvements//////
-# GUI inclusiva(ampliar size or implement High Contrast
-# Be able to deal with texts embbebed in cells.
-
-
+import re
+import tkinter as tk
+from tkinter import filedialog, messagebox
 
 import docx
 import spacy
 import unicodedata
 
-import re
-import tkinter as tk
-from tkinter import filedialog, messagebox
-
 # Load models
-#nlp = spacy.load("en_core_web_sm")
 nlp = spacy.load("en_core_web_md")
-
-
-#nlp = spacy.load("ca_core_news_sm")
-#nlp = spacy.load("en_core_web_trf")
 
 
 # Load and Read Word Document
@@ -46,7 +15,7 @@ def load_document(file_path):
     return docx.Document(file_path)
 
 
-# Helper Funtion to remove accents
+# Remove accents
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
@@ -74,7 +43,6 @@ def identify_pii(text):
         start, end = match.span(1)
         pii_entities.append((start, end, "ID"))
 
-
     print(pii_entities)
     return pii_entities
 
@@ -90,9 +58,23 @@ def redact_text(text, pii_entities):
     return redacted_text
 
 
-#  Process Text and Replace entities
+#  Check if a paragraph contains a page break.
+def has_page_break(para):
+    return para._element.xpath('.//w:br[@w:type="page"]')
+
+
+#  Inserts a page break in the document after the specified paragraph
+def add_page_break(para):
+    run = para.add_run()
+    run.add_break(docx.text.run.WD_BREAK.PAGE)
+
+
+# Process Text, Paragraphs, Breaks and Replace entities ###
 def redact_document(doc):
     for para in doc.paragraphs:
+        # Preserve paragraphs with page breaks
+        if has_page_break(para):
+            continue  # The loop skips this paragraph (to avoid altering it and to preserve the page break).
         text = para.text
         pii_entities = identify_pii(text)
         redacted_text = redact_text(text, pii_entities)
@@ -112,7 +94,7 @@ def main(input_file, output_file):
     save_document(redacted_doc, output_file)
 
 
-#  Gui:
+#  GUI:
 def browse_file():
     filename = filedialog.askopenfilename(filetypes=[("Word Documents", "*.docx")])
     if filename:
