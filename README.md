@@ -4,8 +4,7 @@
 ![version](https://img.shields.io/badge/version-0.2-yellow)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-This application allows you to load Word documents (.docx) and remove personal identifiable information (PII) using natural language processing (NLP) with SpaCy and custom regular expressions. The graphical user interface (GUI) is built with Tkinter.
-
+Anonimyzer is a Python application designed to remove Personally Identifiable Information (PII) from Microsoft Word documents (.docx). The application leverages SpaCy for Natural Language Processing (NLP) to identify PII entities and then redacts them to ensure privacy. The tool is easy to use, featuring a graphical user interface (GUI) built with Tkinter.
 
 <img alt="Example Image" src="images/Anonimyzer 0.1.png"/>
 
@@ -28,6 +27,7 @@ This application allows you to load Word documents (.docx) and remove personal i
 - Identify PII using named entity recognition (NER) with SpaCy and custom regular expressions.
 - Redact PII in the documents.
 - Save redacted documents.
+- Enhanced Visual Mode: Toggle an accessible mode for users with visual impairments, offering higher contrast and larger text.
 
 
 ## Requirements
@@ -38,6 +38,7 @@ This application allows you to load Word documents (.docx) and remove personal i
   - `spacy`
   - `tkinter`
   - `re`
+  - `unicodedata`
 
 ## Installation
 
@@ -51,7 +52,7 @@ This application allows you to load Word documents (.docx) and remove personal i
     ```sh
     pip install python-docx spacy
     ```
-4. Download the SpaCy model:
+4. Download the SpaCy English model:
     ```sh
     python -m spacy download en_core_web_sm
     ```
@@ -64,6 +65,8 @@ This application allows you to load Word documents (.docx) and remove personal i
     ```
 2. In the GUI, select a .docx file using the "Buscar" button.
 3. Click the "Anonimizar" button to process the file and save the redacted document.
+- Enhanced Visual Mode: If needed, click "Enhanced Visual Mode" to toggle a high-contrast, large-text mode for better visibility.
+- Help and About: Use the "Help" menu to access usage instructions and information about the application.
 
 
 ## Technologies
@@ -85,6 +88,9 @@ The Anonimizer development team really appreciates and thanks the time and effor
 < AGR > – [@AuthorTwitter](https://twitter.com/< username >) – author@example.com
 
 ## Change log
+- 0.2.2
+   - Feature
+     - GUI:Enhancement of Visuals.
 - 0.2.1
    - Fixed:
      - Handle File in Use
@@ -114,7 +120,6 @@ The Anonimizer development team really appreciates and thanks the time and effor
 
 
 ### Working on...
-- GUI inclusiva(ampliar Font size or implement High Contrast 
 - Be able to deal with texts embbebed in cells.
 
 ### License
