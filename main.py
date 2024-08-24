@@ -1,4 +1,4 @@
-##  Punto de entraga a nuestro programa:
+##  Punto de entrada a nuestro programa:
 
 from document_processing import load_document, save_document
 from redaction import redact_document
