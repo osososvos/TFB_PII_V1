@@ -1,7 +1,7 @@
 # Anonimyzer.  Universidad Carlemnay. TFB 
 
 ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
-![version](https://img.shields.io/badge/version-0.2-yellow)
+![version](https://img.shields.io/badge/version-0.2.2-yellow)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 Anonimyzer is a Python application designed to remove Personally Identifiable Information (PII) from Microsoft Word documents (.docx). The application leverages SpaCy for Natural Language Processing (NLP) to identify PII entities and then redacts them to ensure privacy. The tool is easy to use, featuring a graphical user interface (GUI) built with Tkinter.
@@ -74,14 +74,13 @@ Enhanced Visual Mode: If needed, click "Enhanced Visual Mode" to toggle to a hig
 Anonimyzer uses the following technologies and tools:
 
 - [Python](https://www.python.org/): ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-- ...
+- spaCy
 
 
 ## Contributing
 
 Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un issue primero para discutir lo que le gustaría cambiar.
 
-The Anonimizer development team really appreciates and thanks the time and effort that all these fellows have put into the project's growth and improvement.
 
 ## Author
 
@@ -97,7 +96,7 @@ The Anonimizer development team really appreciates and thanks the time and effor
      - Handle Page Breaks
 - 0.2
    - Fixed:
-     - Falla con muchas entidades. Usado CAT y peor
+     - Falla con muchas entidades. Se intenta con CAT sin mejora
            --Para testear otros modelos: python -m spacy download en_core_web_md y pip uninstall en-core-web-md
                    Los salva en:.venv\Lib\site-packages\en_core_web_sm---
      - Cambiar a modelo eng_core_MD
@@ -116,11 +115,11 @@ The Anonimizer development team really appreciates and thanks the time and effor
 
 ### Known Issues
 
-- PII in tables or cells not REDACTED
+- PII present in tables or cells are not REDACTED
 
 
 ### Working on...
-- Be able to deal with texts embbebed in cells.
+- Be able to deal with texts embed in cells.
 
 ### License
 
