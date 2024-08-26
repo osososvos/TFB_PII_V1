@@ -11,6 +11,7 @@ def redact_text(text, pii_entities):
         offset += len(replacement_text) - (end - start)
     return redacted_text
 
+
 def redact_document(doc, identify_pii):
     for para in doc.paragraphs:
         if has_page_break(para):

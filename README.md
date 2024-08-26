@@ -119,7 +119,7 @@ Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un 
 
 
 ### Working on...
-- Be able to deal with texts embbebed in cells.
+- Be able to deal with texts embed in cells.
 
 ### License
 
