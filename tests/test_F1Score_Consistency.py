@@ -1,8 +1,8 @@
 import json
-from sklearn.metrics import precision_score, recall_score, f1_score
 
-from pii_detection import identify_pii
 from document_processing import load_document
+from pii_detection import identify_pii
+
 
 def calculate_metrics(true_entities, detected_entities):
     """
@@ -33,6 +33,7 @@ def calculate_metrics(true_entities, detected_entities):
 
     return precision, recall, f1
 
+
 # Load the Golden Document
 with open("GoldenSworn1.json", "r", encoding="utf-8") as f:
     true_data = json.load(f)
@@ -43,7 +44,7 @@ for item in true_data:
     true_entities.extend(item["entities"])
 
 # Load the document and extract the text
-doc = load_document("Sworn3.docx")
+doc = load_document("Sworn1.docx")
 detected_entities = []
 for para in doc.paragraphs:
     text = para.text
@@ -54,6 +55,22 @@ for para in doc.paragraphs:
 # Calculate metrics
 precision, recall, f1 = calculate_metrics(true_entities, detected_entities)
 
-print(f"Precision: {precision:.2f}")
-print(f"Recall: {recall:.2f}")
-print(f"F1-Score: {f1:.2f}")
+# Set the number of iterations
+num_iterations = 200
+
+# Store results for each iteration
+results = []
+
+for _ in range(num_iterations):
+    precision, recall, f1 = calculate_metrics(true_entities, detected_entities)
+    results.append((precision, recall, f1))
+
+# Calculate average metrics over all iterations
+avg_precision = sum(result[0] for result in results) / num_iterations
+avg_recall = sum(result[1] for result in results) / num_iterations
+avg_f1 = sum(result[2] for result in results) / num_iterations
+
+print("Average Metrics:")
+print(f"Precision: {avg_precision:.2f}")
+print(f"Recall: {avg_recall:.2f}")
+print(f"F1-Score: {avg_f1:.2f}")
