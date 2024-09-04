@@ -1,8 +1,8 @@
 import json
-from sklearn.metrics import precision_score, recall_score, f1_score
 
-from pii_detection import identify_pii
 from document_processing import load_document
+from pii_detection import identify_pii
+
 
 def calculate_metrics(true_entities, detected_entities):
     """
