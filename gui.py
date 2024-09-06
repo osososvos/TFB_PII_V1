@@ -58,7 +58,7 @@ def redact_file(entry_file_path):
 
 # Function to display an "About" dialog with information about the app.
 def show_about_dialog():
-    messagebox.showinfo("About", "Anonimyzer v1.0\n\nAplicacion para eliminar informacion personal identificable en documentos Word.")
+    messagebox.showinfo("About", "Anonimyzer v0.4 \n\nAplicacion para eliminar informacion personal identificable en documentos Word.\nDesarrollado por OSV.\nContacto: https://github.com/osososvos/TFB_PII_V1")
 
 # Function to display a "Help" dialog with usage instructions
 def show_help_dialog():
@@ -70,7 +70,7 @@ def create_gui():
     app.title("Anonimizador de información personal")
 
     # Set window size and position
-    app.geometry("500x300")
+    app.geometry("450x250")
     app.resizable(False, False)
 
     # Menu bar
