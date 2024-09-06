@@ -29,6 +29,6 @@ def extract_entities_from_doc(input_file, output_json):
 
 
 # Ejecutar la extracción
-input_file = "Sworn1.docx"
-output_json = "GoldenSworn1.json"
+input_file = "Sworn4.docx"
+output_json = "GoldenSworn4.json"
 extract_entities_from_doc(input_file, output_json)

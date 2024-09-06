@@ -1,12 +1,12 @@
 # Anonymizer.  Universidad Carlemany 2024. TFB 
 
 ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
-![version](https://img.shields.io/badge/version-0.2.2-yellow)
+![version](https://img.shields.io/badge/version-0.4.2-yellow)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 Anonymizer is a Python application designed to remove Personally Identifiable Information (PII) from Microsoft Word documents (.docx). The application leverages SpaCy for Natural Language Processing (NLP) to identify PII entities and then redacts them to ensure privacy. The tool is easy to use, featuring a graphical user interface (GUI) built with Tkinter.
 
-<img alt="Example Image" src="images/Anonimyzer 0.1.png"/>
+<img alt="Example Image" src="images/AnonymizerScreen.png"/>
 
 **Table of Contents**
 
@@ -87,6 +87,9 @@ Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un 
 < AGR > – [@AuthorTwitter](https://twitter.com/< username >) – author@example.com
 
 ## Change log
+- 0.4.1
+   - Feature
+     - GUI:Enhancement of Visuals 2
 - 0.2.2
    - Feature
      - GUI:Enhancement of Visuals.

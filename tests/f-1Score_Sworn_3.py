@@ -34,7 +34,7 @@ def calculate_metrics(true_entities, detected_entities):
     return precision, recall, f1
 
 # Load the Golden Document
-with open("GoldenSworn1.json", "r", encoding="utf-8") as f:
+with open("GoldenSworn3.json", "r", encoding="utf-8") as f:
     true_data = json.load(f)
 
 # Extract the true entities
@@ -43,7 +43,7 @@ for item in true_data:
     true_entities.extend(item["entities"])
 
 # Load the document and extract the text
-doc = load_document("Sworn3.docx")
+doc = load_document("Sworn4.docx")
 detected_entities = []
 for para in doc.paragraphs:
     text = para.text
