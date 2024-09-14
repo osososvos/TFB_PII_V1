@@ -8,6 +8,7 @@ Anonymizer is a Python application designed to remove Personally Identifiable In
 
 <img alt="Example Image" src="images/AnonymizerScreen.png"/>
 
+
 **Table of Contents**
 
 - [Installation](#installation)
