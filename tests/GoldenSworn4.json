@@ -1,0 +1,501 @@
+[
+    {
+        "text": "Sworn Translation Certificate",
+        "entities": []
+    },
+    {
+        "text": "I Lucas N. CARTER sworn translator and interpreter registered with number: 6921.",
+        "entities": [
+            {
+                "start": 2,
+                "end": 17,
+                "label": "PERSON"
+            },
+            {
+                "start": 75,
+                "end": 79,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 75,
+                "end": 79,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Appointed by the Ministry of Justice and the Interior in the General Register of Sworn Translators and Interpreters of the State of Malta and by virtue of the Sworn Translation and Interpretation Law of 22 June 2004 hereby",
+        "entities": [
+            {
+                "start": 13,
+                "end": 36,
+                "label": "ORG"
+            },
+            {
+                "start": 45,
+                "end": 53,
+                "label": "ORG"
+            },
+            {
+                "start": 57,
+                "end": 137,
+                "label": "ORG"
+            },
+            {
+                "start": 155,
+                "end": 202,
+                "label": "ORG"
+            },
+            {
+                "start": 203,
+                "end": 215,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "CERTIFY:",
+        "entities": []
+    },
+    {
+        "text": "That the adjoining English text is a true translation of the document in Maltese that has been shown to me and which I append here to with my stamp.",
+        "entities": []
+    },
+    {
+        "text": "Email: lucas.carter@malta.mt",
+        "entities": [
+            {
+                "start": 7,
+                "end": 28,
+                "label": "PERSON"
+            },
+            {
+                "start": 7,
+                "end": 28,
+                "label": "EMAIL"
+            }
+        ]
+    },
+    {
+        "text": "In witness whereof I sign and seal this certificate in Valletta on the 20th September 2022.",
+        "entities": [
+            {
+                "start": 67,
+                "end": 90,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "CIVIL REGISTRY ",
+        "entities": []
+    },
+    {
+        "text": "OF THE STATE OF MALTA ",
+        "entities": []
+    },
+    {
+        "text": "Section one - BOOK NO. 37 OF BIRTHS ",
+        "entities": [
+            {
+                "start": 8,
+                "end": 11,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 23,
+                "end": 25,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 29,
+                "end": 35,
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "text": "Name: Sarah\t",
+        "entities": [
+            {
+                "start": 6,
+                "end": 11,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "First Surname: Vella\t",
+        "entities": [
+            {
+                "start": 15,
+                "end": 20,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Second Surname: Travis\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 6,
+                "label": "ORDINAL"
+            },
+            {
+                "start": 16,
+                "end": 23,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Gender: Female\t",
+        "entities": []
+    },
+    {
+        "text": "Time of birth: At 12:35 p.m.\t",
+        "entities": [
+            {
+                "start": 18,
+                "end": 28,
+                "label": "TIME"
+            }
+        ]
+    },
+    {
+        "text": "On the 10th February 2024\t",
+        "entities": [
+            {
+                "start": 3,
+                "end": 25,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Place of birth: Mater Dei Hospital\t",
+        "entities": []
+    },
+    {
+        "text": "Msida State of Malta\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 20,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Father: Joseph Vella\t",
+        "entities": [
+            {
+                "start": 8,
+                "end": 20,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Son of Anthony and Maria\t",
+        "entities": [
+            {
+                "start": 7,
+                "end": 14,
+                "label": "PERSON"
+            },
+            {
+                "start": 19,
+                "end": 24,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Born in: Valletta Malta\t",
+        "entities": [
+            {
+                "start": 9,
+                "end": 23,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "On the 8th October 1968\t",
+        "entities": [
+            {
+                "start": 3,
+                "end": 23,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Civil status: married --- Nationality: Maltese\t",
+        "entities": []
+    },
+    {
+        "text": "Document: National ID\t",
+        "entities": []
+    },
+    {
+        "text": "Number: 0045218\t",
+        "entities": [
+            {
+                "start": 8,
+                "end": 15,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 8,
+                "end": 15,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Address: Triq Il-Kbira 15.\t",
+        "entities": []
+    },
+    {
+        "text": "Valletta State of Malta\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 17,
+                "label": "ORG"
+            },
+            {
+                "start": 18,
+                "end": 23,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Mother: Emma Attard\t",
+        "entities": [
+            {
+                "start": 8,
+                "end": 19,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Daughter of: Edward and Clara\t",
+        "entities": [
+            {
+                "start": 13,
+                "end": 19,
+                "label": "PERSON"
+            },
+            {
+                "start": 24,
+                "end": 29,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Born in: Gozo Malta\t",
+        "entities": [
+            {
+                "start": 9,
+                "end": 19,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "On the 19th April 1972\t",
+        "entities": [
+            {
+                "start": 3,
+                "end": 22,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Civil status: married --- Nationality: Maltese\t",
+        "entities": []
+    },
+    {
+        "text": "Document: Passport\t",
+        "entities": []
+    },
+    {
+        "text": "Number: 778899001\t",
+        "entities": [
+            {
+                "start": 8,
+                "end": 17,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Address: Triq Il-Kbira",
+        "entities": []
+    },
+    {
+        "text": "Parents’ marriage: submitted documented evidence",
+        "entities": []
+    },
+    {
+        "text": "Married on: 22 August 1991",
+        "entities": [
+            {
+                "start": 12,
+                "end": 14,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 15,
+                "end": 26,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Place: San Marino Republic of San Marino\t",
+        "entities": [
+            {
+                "start": 7,
+                "end": 29,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Registered at: Civil Registry Book 54 Page 200 Section 3a",
+        "entities": [
+            {
+                "start": 35,
+                "end": 37,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 43,
+                "end": 46,
+                "label": "CARDINAL"
+            }
+        ]
+    },
+    {
+        "text": "Declarer: Luigi Rossi",
+        "entities": [
+            {
+                "start": 10,
+                "end": 21,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Capacity in which he declares: father",
+        "entities": []
+    },
+    {
+        "text": "Address: the aforementioned",
+        "entities": []
+    },
+    {
+        "text": "Checked by: Dr. Giorgio Conti health professional register number: 4379.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 29,
+                "label": "PERSON"
+            },
+            {
+                "start": 67,
+                "end": 71,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 67,
+                "end": 71,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Medical Certificate number: 68745.",
+        "entities": [
+            {
+                "start": 28,
+                "end": 33,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 28,
+                "end": 33,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Remarks: The Republic of San Marino will be considered the place of birth.",
+        "entities": [
+            {
+                "start": 9,
+                "end": 35,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "The Registrar: Paolo Lombardi head registrar of the Civil Registry.",
+        "entities": [
+            {
+                "start": 15,
+                "end": 29,
+                "label": "PERSON"
+            },
+            {
+                "start": 48,
+                "end": 66,
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "text": "At 10:30 a.m. on 15th April 2024.",
+        "entities": [
+            {
+                "start": 3,
+                "end": 13,
+                "label": "TIME"
+            },
+            {
+                "start": 17,
+                "end": 32,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "On the verso there is Apostille number 123423789K dated 30 March 2024.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 31,
+                "label": "ORG"
+            },
+            {
+                "start": 39,
+                "end": 48,
+                "label": "DATE"
+            },
+            {
+                "start": 56,
+                "end": 69,
+                "label": "DATE"
+            }
+        ]
+    }
+]

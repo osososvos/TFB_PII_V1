@@ -1,0 +1,517 @@
+[
+    {
+        "text": "Sworn Translation Certificate",
+        "entities": []
+    },
+    {
+        "text": "I Lila K. MARTIN sworn translator and interpreter registered with number: 4719.",
+        "entities": [
+            {
+                "start": 2,
+                "end": 16,
+                "label": "PERSON"
+            },
+            {
+                "start": 74,
+                "end": 78,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Appointed by the Ministry of Justice and the Interior in the General Register of Sworn Translators and Interpreters of the Republic of San Marino and by virtue of the Sworn Translation and Interpretation Law of 28 April 2000 hereby",
+        "entities": [
+            {
+                "start": 13,
+                "end": 36,
+                "label": "ORG"
+            },
+            {
+                "start": 45,
+                "end": 53,
+                "label": "ORG"
+            },
+            {
+                "start": 57,
+                "end": 118,
+                "label": "ORG"
+            },
+            {
+                "start": 119,
+                "end": 145,
+                "label": "GPE"
+            },
+            {
+                "start": 163,
+                "end": 210,
+                "label": "ORG"
+            },
+            {
+                "start": 211,
+                "end": 224,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "CERTIFY:",
+        "entities": []
+    },
+    {
+        "text": "That the adjoining English text is a true translation of the document in Italian that has been shown to me and which I append here to with my stamp.",
+        "entities": []
+    },
+    {
+        "text": "Email: lila.martin@sanmarino.sm",
+        "entities": [
+            {
+                "start": 7,
+                "end": 31,
+                "label": "EMAIL"
+            }
+        ]
+    },
+    {
+        "text": "In witness whereof I sign and seal this certificate in San Marino on the 23rd March 2023.",
+        "entities": [
+            {
+                "start": 55,
+                "end": 65,
+                "label": "GPE"
+            },
+            {
+                "start": 69,
+                "end": 88,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "CIVIL REGISTRY ",
+        "entities": []
+    },
+    {
+        "text": "OF THE REPUBLIC OF SAN MARINO ",
+        "entities": []
+    },
+    {
+        "text": "Section one - BOOK NO. 112 OF BIRTHS ",
+        "entities": [
+            {
+                "start": 8,
+                "end": 11,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 23,
+                "end": 26,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 30,
+                "end": 36,
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "text": "Name: Maria",
+        "entities": [
+            {
+                "start": 6,
+                "end": 11,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "First Surname: Rossi",
+        "entities": [
+            {
+                "start": 15,
+                "end": 20,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Second Surname: Bianchi",
+        "entities": [
+            {
+                "start": 0,
+                "end": 6,
+                "label": "ORDINAL"
+            },
+            {
+                "start": 16,
+                "end": 23,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Gender: Female",
+        "entities": []
+    },
+    {
+        "text": "Time of birth: At 9:15 a.m.",
+        "entities": [
+            {
+                "start": 18,
+                "end": 27,
+                "label": "TIME"
+            }
+        ]
+    },
+    {
+        "text": "On the 12th April 2024",
+        "entities": [
+            {
+                "start": 3,
+                "end": 22,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Place of birth: Ospedale di Stato",
+        "entities": [
+            {
+                "start": 16,
+                "end": 33,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "San Marino Republic of San Marino\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 33,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Father: Marco Rossi",
+        "entities": [
+            {
+                "start": 8,
+                "end": 19,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Son of Luigi and Anna",
+        "entities": [
+            {
+                "start": 7,
+                "end": 12,
+                "label": "PERSON"
+            },
+            {
+                "start": 17,
+                "end": 21,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Born in: Rimini Italy",
+        "entities": [
+            {
+                "start": 16,
+                "end": 21,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "On the 5th November 1965",
+        "entities": [
+            {
+                "start": 3,
+                "end": 24,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Civil status: married --- Nationality: Sammarinese",
+        "entities": []
+    },
+    {
+        "text": "Document: National I",
+        "entities": []
+    },
+    {
+        "text": "Number: 0098123\t",
+        "entities": [
+            {
+                "start": 8,
+                "end": 15,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 8,
+                "end": 15,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Address: Via Giuseppe Garibaldi 5.",
+        "entities": []
+    },
+    {
+        "text": "San Marino Republic of San Marino\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 33,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Mother: Elena Bianchi",
+        "entities": [
+            {
+                "start": 8,
+                "end": 21,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Daughter of: Carlo and Rosa",
+        "entities": [
+            {
+                "start": 13,
+                "end": 18,
+                "label": "PERSON"
+            },
+            {
+                "start": 23,
+                "end": 27,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Born in: Bologna Italy",
+        "entities": [
+            {
+                "start": 9,
+                "end": 16,
+                "label": "GPE"
+            },
+            {
+                "start": 17,
+                "end": 22,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "On the 17th July 1968",
+        "entities": [
+            {
+                "start": 3,
+                "end": 21,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Civil status: married --- Nationality: Sammarinese",
+        "entities": []
+    },
+    {
+        "text": "Document: Passport",
+        "entities": []
+    },
+    {
+        "text": "Number: 556677889",
+        "entities": [
+            {
+                "start": 8,
+                "end": 17,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 8,
+                "end": 17,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Address: Via Giuseppe Garibaldi 5.",
+        "entities": []
+    },
+    {
+        "text": "San Marino Republic of San Marino\t",
+        "entities": [
+            {
+                "start": 0,
+                "end": 33,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Parents’ marriage: submitted documented evidence",
+        "entities": []
+    },
+    {
+        "text": "Married on: 22 August 1997",
+        "entities": [
+            {
+                "start": 12,
+                "end": 14,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 15,
+                "end": 26,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "Place: San Marino Republic of San Marino\t",
+        "entities": [
+            {
+                "start": 7,
+                "end": 29,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "Registered at: Civil Registry Book 54 Page 200 Section 3a",
+        "entities": [
+            {
+                "start": 35,
+                "end": 37,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 43,
+                "end": 46,
+                "label": "CARDINAL"
+            }
+        ]
+    },
+    {
+        "text": "Declarer: Luigi Rossi",
+        "entities": [
+            {
+                "start": 10,
+                "end": 21,
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "text": "Capacity in which he declares: father",
+        "entities": []
+    },
+    {
+        "text": "Address: the aforementioned",
+        "entities": []
+    },
+    {
+        "text": "Checked by: Dr. Giorgio Conti health professional register number: 3211. Medical Certificate number: 11223.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 29,
+                "label": "PERSON"
+            },
+            {
+                "start": 67,
+                "end": 71,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 101,
+                "end": 106,
+                "label": "CARDINAL"
+            },
+            {
+                "start": 67,
+                "end": 71,
+                "label": "ID"
+            },
+            {
+                "start": 101,
+                "end": 106,
+                "label": "ID"
+            }
+        ]
+    },
+    {
+        "text": "Remarks: The Republic of San Marino will be considered the place of birth.",
+        "entities": [
+            {
+                "start": 9,
+                "end": 35,
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "text": "The Registrar: Paolo Lombardi head registrar of the Civil Registry.",
+        "entities": [
+            {
+                "start": 15,
+                "end": 29,
+                "label": "PERSON"
+            },
+            {
+                "start": 48,
+                "end": 66,
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "text": "At 10:30 a.m. on 15th April 2024.",
+        "entities": [
+            {
+                "start": 3,
+                "end": 13,
+                "label": "TIME"
+            },
+            {
+                "start": 17,
+                "end": 32,
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "text": "On the verso there is Apostille number 123423789K dated 30 March 2024.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 31,
+                "label": "ORG"
+            },
+            {
+                "start": 39,
+                "end": 48,
+                "label": "DATE"
+            },
+            {
+                "start": 56,
+                "end": 69,
+                "label": "DATE"
+            }
+        ]
+    }
+]

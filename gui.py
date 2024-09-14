@@ -1,5 +1,8 @@
+#  Graphical user interface
+
 import tkinter as tk
 from tkinter import filedialog, messagebox
+from main import main
 
 # Global variable to track whether the enhanced visual mode is active
 modo_mejorado = False
@@ -44,17 +47,23 @@ def browse_file(entry_file_path):
 
 # Function to handle the file redaction process
 def redact_file(entry_file_path):
+    # Get the input document path from the entry widget
     input_doc = entry_file_path.get()
     if not input_doc:
+        # Show a warning if no file was selected
         messagebox.showwarning("Atención", "Por favor seleccione un fichero .docx")
         return
 
+    # Open a file dialog to save the redacted file
     output_doc = filedialog.asksaveasfilename(defaultextension=".docx", filetypes=[("Documento Word", "*.docx")])
     if not output_doc:
+        # If the operation is cancelled, do nothing
         return
 
     # Call the main function to process the file
-    messagebox.showinfo("Información", "El fichero ha sido anonimizado y guardado correctamente.")
+    main(input_doc, output_doc)
+    # Show a confirmation message once the file has been redacted and saved
+    messagebox.showinfo("Informacion", "El fichero ha sido anonimizado y guardado correctamente.")
 
 # Function to display an "About" dialog with information about the app.
 def show_about_dialog():
@@ -66,6 +75,7 @@ def show_help_dialog():
 
 # Function to create the main GUI window
 def create_gui():
+    # Create the main application window
     app = tk.Tk()
     app.title("Anonimizador de información personal")
 
