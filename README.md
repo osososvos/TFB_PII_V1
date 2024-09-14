@@ -84,7 +84,7 @@ Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un 
 
 ## Author
 
-< AGR > – [@AuthorTwitter](https://twitter.com/< username >) – author@example.com
+< AGR >
 
 ## Change log
 - 0.4.1
@@ -126,4 +126,4 @@ Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un 
 
 ### License
 
-Anonimyzer is distributed under the < license > license. See [`LICENSE`](LICENSE.md) for more details.
+Anonimyzer is distributed under the MIT license. See [`LICENSE`](LICENSE) for more details.
