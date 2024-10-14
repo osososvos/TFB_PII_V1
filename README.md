@@ -129,4 +129,4 @@ Las contribuciones son bienvenidas. Para cambios importantes, por favor abra un 
 
 ### License
 
-Anonimyzer is distributed under the MIT license. See [`LICENSE`](LICENSE) for more details.
+Anonimyzer is distributed under the BSD 3 license. See [`LICENSE`](LICENSE) for more details.
